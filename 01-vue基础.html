@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue基础</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app" @click="handle">{{message}}</div>
+    <script>
+        //let(变量)/const(常量)
+        const app = new Vue({
+            el:"#app",//挂载要管理的元素
+            data:{//定义数据
+                message:"Hello Vue!"
+            },
+            methods: {
+              handle: function(){
+                this.message= 'world'
+              }
+            }
+        })
+    </script>
+</body>
+</html> 
